@@ -16,12 +16,14 @@ app.use(
 
 app.use(BodyPareser.json());
 
+
+// Require Notes routes
+require('./app/routes/note.routes.js')(app);
 app.listen(3000, function () {
   console.log("server is running : 3000");
 });
 
-// Require Notes routes
-require('./app/routes/note.routes.js')(app);
+
 
 
 
